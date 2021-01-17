@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Events</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<style type="text/css">
+body {
+  font: 62.5%/1.6 Verdana, Tahoma, sans-serif;
+  color: #333333;
+}
+h1,h2 {
+  color: #ff6600;
+}
+header, main, footer {
+  margin: 30px auto;
+  width: 600px;
+}
+.boxed {
+  position: relative;
+}
+#box {
+  background: silver;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+
+}
+
+#content {
+  padding: 8px;
+}
+.box {
+  border: 1px solid #ccc;
+  border-radius:4px;
+  box-shadow:0 0 2px #ccc;
+}
+</style>
+</head>
+
+
+
+<body>
+<div class="container">
+<?php require "page.php";?>
+
+<header>
+  <h1>Page Title</h1>
+  <p>Page Description</p>
+  <button onclick="myFunction2()">Влево</button>
+  <button onclick="myFunction()">Вправо</button>
+  <button onclick="myFunction4()">Вверх</button>
+  <button onclick="myFunction3()">Вниз</button>
+</header>
+
+<div class="boxed">
+  <div id="box"></div>
+</div>
+
+<main id="content" class="wrapper box">
+  <article>
+    <h2>Article Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Nunc urna metus, ultricies eu, congue vel, laoreet...</p>
+  </article>
+  <article>
+    <h2 id="anim">Article Title</h2>
+    <p>Morbi malesuada, ante at feugiat tincidunt, enim massagravida metus, commodo lacinia massa diam vel eros...</p>
+    <a id="link" href="ФФФ">Interesting</a>
+  </article>
+</main>
+
+<footer data-id="2">
+  &copy;copyright 2016
+</footer>
+
+</div>
+<script>
+
+    /////////////
+    // События //
+    /////////////
+
+    $("#link").click(function(event){
+      $("#link").fadeToggle(1500);
+      event.stopImmediatePropagation(); // если используются два или более обработчика событий, останавливает выполнение и не даёт возможности обрабатывать следующим функциям/методам.
+      return false;
+    });
+
+    var box = $("#box");
+
+    function myFunction() {
+      box.animate({
+        "left": "+=100px"
+      }, {queue:"x", duration:500}).dequeue("x");
+    }
+
+    function myFunction2() {
+      box.animate({
+        "left": "-=100px"
+      }, {queue: "x", duration: 500}).dequeue("x");
+    }
+
+    function myFunction3() {
+      box.animate({
+        "top": "+=100px"
+      }, {queue: "y", duration: 500}).dequeue("y");
+    }
+
+    function myFunction4() {
+      box.animate({
+        "top": "-=100px"
+      }, {queue: "y", duration: 500}).dequeue("y");
+    }
+
+
+</script>
+
+</body>
+</html>
