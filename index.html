@@ -2,64 +2,200 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Events</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
 <style type="text/css">
+body
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: url(123.png) center center fixed no-repeat;
+  background-size: cover;
+}
+
+nav
+{
+  position: relative;
+  z-index: 25;
+  border-bottom: double 2px #4F70AFFFk;
+  font-family: georgia;
+}
+
+#nav1
+{
+  background: #4F81C4E7;
+}
+
+#nav1, #nav2
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li
+{
+  float: left;
+}
+
+li a
+{
+  color: white;
+  padding: 12px 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.2s;
+
+}
+
+li a:hover
+{
+  background: #57B4DFCB;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown
+{
+  z-index: 5;
+}
+
+.dropdown-content
+{
+  background: rgba(77, 126, 191, 1);
+
+  display: none;
+  position: absolute;
+  box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, .5);
+  z-index: -2;
+}
+
+.dropdown-content a
+{
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, .14);
+}
+
+.dropdown:hover .dropdown-content
+{
+  display: block;
+}
+
+.rightcorner
+{
+  float: right;
+  overflow: hidden;
+}
+
+.row
+{
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont
+{
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px;
+  background: #4F81C4E7;
+  box-shadow: 1px 5px 5px 1px rgba(1,1,1,0.5);
+  width: 43%;
+  height: 43%;
+  min-height: 100px;
+  min-width: 350px;
+}
 
 p
 {
-  text-indent: 20px;
+  margin: 20px;
+  text-indent: 15px;
+  color: black;
+  font-family: verdana;
+}
+
+.cont h3
+{
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: black;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0, 0.3);
+  padding-bottom: 10px;
+}
+
+
+.cont h3::first-letter
+{
+  color: white;
+  font-size: 2rem;
+}
+
+
+.navbar-brand
+{
+  display: inline-block;
+  float: left;
+  position: relative;
 }
 
 </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand navbar-light" style="background-color: #e3f2fd;">
-    <a href="" class="navbar-brand">Tekken 7</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="page1.html">Page #1</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link #2</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link #3</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-
+<nav>
+  <ul id="nav1">
+    <li><a href="">Link 01</a></li>
+    <li><a href="">Link 02</a></li>
+    <li><a href="">Link 03</a></li>
+    <li><a href="">Link 04</a></li>
+    <li class="dropdown">
+      <a href="">Dropdown</a>
+      <div class="dropdown-content">
+          <a href="">00000111101</a>
+          <a href="">0000002</a>
+          <a href="">0000003</a>
+          <a href="">0000004</a>
+      </div>
+    </li>
+    <div class="rightcorner">
+      <ul id="nav2">
+        <li><a href="">001</a></li>
+        <li><a href="">002</a></li>
+        <li><a href="">003</a></li>
       </ul>
     </div>
-  </nav>
+  </ul>
+</nav>
 
-  <div class="container-fluid mt-2">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit optio saepe aperiam doloremque quo, reprehenderit tempore, similique, sapiente animi ipsam amet dicta consequuntur dolorem voluptas numquam? Iure magnam, minima dolores porro. Quia tempore, ex exercitationem eos? Natus nostrum dolorem voluptatum, neque mollitia sequi cumque minus autem similique voluptatem ad possimus aperiam dignissimos, quisquam quia nulla ab? Delectus libero, earum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur praesentium veniam cupiditate aspernatur modi error laboriosam qui sunt fugit nam, reprehenderit magnam accusamus fugiat numquam, aperiam veritatis quos enim blanditiis. Minima iure molestias illum animi eligendi dolorum laborum quibusdam hic architecto sapiente placeat eos voluptas, quasi possimus obcaecati earum laboriosam, excepturi, maiores ad, dignissimos perferendis blanditiis? Eaque nostrum in quisquam dolor consectetur sed optio corporis minima. Provident ad, nam adipisci expedita aspernatur aliquam voluptatibus ullam architecto voluptatem nihil dolor esse deserunt accusamus corrupti laudantium dignissimos minus tempora repudiandae minima? Voluptas atque itaque qui cum nihil, sed autem perspiciatis alias laboriosam praesentium iure aut accusamus laudantium vitae possimus magnam sint debitis, ex officia corporis corrupti odio, dicta expedita. Cum, quia, voluptatibus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit soluta facere nulla, et tempore dolorem quisquam nesciunt aspernatur eligendi minus dolor quod consectetur, odio nihil, quibusdam ab magni sed nam quae! Cupiditate id aperiam vel dolorem veniam est necessitatibus consectetur iure autem aut sint quibusdam eos natus maiores voluptas itaque fugit, incidunt. Delectus error eaque nesciunt neque, aliquid quisquam ut fugit laborum aperiam expedita velit quos dolore odit nihil libero, magnam similique fuga, numquam sint! Commodi praesentium, minima placeat mollitia sint accusantium? Voluptates, quam, eum? Quos, dolores. Facilis quia eaque quidem sapiente eligendi aliquid at explicabo reprehenderit animi, rem corrupti voluptates molestiae odit perferendis cum id error ab omnis magnam cupiditate facere quisquam non harum modi. Amet mollitia eaque asperiores distinctio et odio earum autem ea. Saepe modi non quaerat, quasi ipsum velit, cumque dignissimos culpa debitis eius blanditiis ut praesentium quis enim laborum, minima harum officiis suscipit neque et asperiores! Ad, ullam voluptates itaque, consectetur ducimus, nihil quibusdam vitae, blanditiis cupiditate esse ipsa eum commodi. Animi quo pariatur itaque fuga commodi nemo eius culpa, iusto numquam iure, enim esse.</p>
+<div class="row">
+  <div class="cont">
+    <h3>New Publication</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Debitis et molestias nemo at voluptatibus perferendis obcaecati ex eveniet est incidunt laboriosam earum excepturi quaerat assumenda voluptas distinctio dolore facilis aliquid nesciunt, magnam totam doloremque praesentium sit. Similique accusamus vero facilis.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Debitis et molestias nemo at voluptatibus perferendis obcaecati ex eveniet est incidunt laboriosam earum excepturi quaerat assumenda voluptas distinctio dolore facilis aliquid nesciunt, magnam totam doloremque praesentium sit. Similique accusamus vero facilis.</p>
   </div>
-
+  <div class="cont">
+    <h3>New Publication</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Debitis et molestias nemo at voluptatibus perferendis obcaecati ex eveniet est incidunt laboriosam earum excepturi quaerat assumenda voluptas distinctio dolore facilis aliquid nesciunt, magnam totam doloremque praesentium sit. Similique accusamus vero facilis.</p>
+  </div>
+  <div class="cont">
+    <h3>New Publication</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Debitis et molestias nemo at voluptatibus perferendis obcaecati ex eveniet est incidunt laboriosam earum excepturi quaerat assumenda voluptas distinctio dolore facilis aliquid nesciunt, magnam totam doloremque praesentium sit. Similique accusamus vero facilis.</p>
+  </div>
+  <div class="cont">
+    <h3>Новая публикация</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Debitis et molestias nemo at voluptatibus perferendis obcaecati ex eveniet est incidunt laboriosam earum excepturi quaerat assumenda voluptas distinctio dolore facilis aliquid nesciunt, magnam totam doloremque praesentium sit. Similique accusamus vero facilis.</p>
+  </div>
+</div>
 </body>
-
 </html>
